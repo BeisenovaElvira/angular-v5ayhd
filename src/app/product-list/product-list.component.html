@@ -1,0 +1,32 @@
+
+<h2>Products</h2>
+<div *ngFor="let product of products">
+    <h3>
+    <a [title]="product.name + ' details'">
+      {{ product.name }}
+      <br>
+      <p class = "rating"> <i>Rating:</i> {{product.rating}}</p>
+    </a>
+  </h3>
+
+  <img src = {{product.image}} width = "200px">
+
+
+   <p *ngIf="product.description">
+  <b> Description:  </b>   {{ product.description }}
+  </p>
+    <p><a href = {{product.ref}} class = "aRef">More infromation</a></p>
+    <a href = "whatsapp://send?text=<?php echo urlencode( '<TEXT>' ); ?>"
+data-action="share/whatsapp/share">
+    <button class = "btn">
+      Share
+    </button>
+  </a>
+    <hr id = "line">
+
+</div>
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
