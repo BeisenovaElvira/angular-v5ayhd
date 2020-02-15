@@ -16,7 +16,7 @@
   <b> Description:  </b>   {{ product.description }}
   </p>
     <p><a href = {{product.ref}} class = "aRef">More infromation</a></p>
-    <a href = "whatsapp://send?text=<?php echo urlencode( '<TEXT>' ); ?>"
+    <a href = "whatsapp://send?text=<?php echo urlencode( '{{products.link}}' ); ?>"
 data-action="share/whatsapp/share">
     <button class = "btn">
       Share
