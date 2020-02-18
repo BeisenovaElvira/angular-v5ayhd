@@ -1,5 +1,4 @@
 
-<h2>Products</h2>
 <div *ngFor="let product of products">
     <h3>
     <a [title]="product.name + ' details'">
@@ -13,15 +12,11 @@
 
 
    <p *ngIf="product.description">
-  <b> Description:  </b>   {{ product.description }}
+  <b> Description: </b> {{ product.description }}
   </p>
     <p><a href = {{product.ref}} class = "aRef">More infromation</a></p>
-    <a href = "whatsapp://send?text=<?php echo urlencode( '<TEXT>' ); ?>"
-data-action="share/whatsapp/share">
-    <button class = "btn">
-      Share
-    </button>
-  </a>
+
+    <a href="https://telegram.me/share/url?url={{ product.ref }}" data-text="Take a look at this new item! You can read more information there!:" class = "btn">Share</a>
     <hr id = "line">
 
 </div>
